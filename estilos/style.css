@@ -31,15 +31,15 @@ section#login {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     overflow: hidden;
 
     background-color: #eaebed;
     width: 250px;
-    height: 500px;
+    height: 480px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.476);
 
+    transform: translate(-50%, -50%);
     transition: width .4, height .4;
     transition-timing-function: ease;
 }
@@ -48,7 +48,7 @@ section#login > div#imagem {
     display: block;
     background: #26384d url('../imagens/pitstop.jpg');
     background-size: cover;
-    background-position: center bottom;
+    background-position: center center;
     height: 200px;
 }
 
@@ -57,6 +57,8 @@ section#login > div#formulario {
     padding: 10px;
 }
 
+/* DIVS */
+
 div#formulario > h1 {
     text-align: center;
     margin-bottom: 10px;
@@ -64,4 +66,94 @@ div#formulario > h1 {
 
 div#formulario > p {
     font-size: 0.8em;
+    text-align: center;
 }
+
+/* FORMS */
+
+form > div.campo {
+    background-color: #26384d;
+    border: 2px solid #26384d;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0px;
+
+    background-color: #26384d;
+}
+
+div.campo > label {
+    display: none;
+}
+
+div.campo > span {
+    color: #eaebed;
+
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    /* 100vw = viewwidth do site inteiro
+    100% = viewwidth do container
+    */
+    width: 100%;
+    height: 40px;
+    background-color: #26384d;
+    color: #eaebed;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: #415e80;
+}
+
+form > a.botao {    
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 6px;
+    margin-top: 6px;
+    background-color: #2a4460;
+    color: #eaebed;
+    border: 1px solid #26384d;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: #415e80;
+}
+
+form > a.botao > span {
+    font-size: 0.8em;
+}
+
+div.campo > span {
+    color: eaebed;
+    /* background-color: black; */
+    font-size: 2em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo > input {
+    background-color: #fff29d;
+    font-size: 1em;
+    width: calc(100% - 45.8px);
+    height: 100%;
+    border: 0px;
+    border-radius: 8px;
+    padding: 4px;
+
+    transform: translateY(-13.3px);
+}
+
+div.campo > input:focus-within {
+    background-color: #eaebed;
+}
+
+/* Sempre que houverem animações, deixar as transforms por último para evitar erros de compatibilidade */
